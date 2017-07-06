@@ -1,9 +1,10 @@
 ---
 applications:
-- memory: 512M
-  instances: 1
-  stack: cflinuxfs2
-  buildpack: https://github.com/zendtech/zend-server-php-buildpack-bluemix
+- name: PHPWordPress 
+  memory: 512M 
+  instances: 1 
+  host: PHPWordPress-${random-word} 
+  buildpack: https://github.com/ziniman/Zend-Server-7-0-Bluemix
 
 services:
 - new-app-db
@@ -11,4 +12,4 @@ services:
 declared-services:
   new-app-db:
     label: cleardb
-    plan: lite
+    plan: cb5
