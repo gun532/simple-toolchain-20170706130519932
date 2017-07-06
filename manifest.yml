@@ -4,3 +4,11 @@ applications:
   instances: 1
   stack: cflinuxfs2
   buildpack: https://github.com/zendtech/zend-server-php-buildpack-bluemix
+
+services:
+- new-app-db
+
+declared-services:
+  new-app-db:
+    label: cleardb
+    plan: lite
